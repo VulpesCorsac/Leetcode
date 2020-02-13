@@ -5,12 +5,14 @@ As a reminder, a _binary search tree_ is a tree that satisfies these constraints
 The left subtree of a node contains only nodes with keys **less than** the node's key.
 The right subtree of a node contains only nodes with keys **greater than** the node's key.
 Both the left and right subtrees must also be binary search trees.
- **Example 1:**
+
+**Example 1:**
 ![](tree.png)
 ```
 Input: [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]
 Output: [30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]
 ```
+
 **Note:**
 * The number of nodes in the tree is between *1* and *100*.
 * Each node will have value between *0* and *100*.
