@@ -10,7 +10,6 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 **TODO:**
 * 17. Letter Combinations of a Phone Number   
 * 12. Integer to Roman
-* 13. Roman to Integer
 * 78. Subsets
 * 513. Find Bottom Left Tree Value
 * 515. Find Largest Value in Each Tree Row
