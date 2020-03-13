@@ -8,6 +8,9 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 ```
 
 **TODO:**
+* 225. Implement Stack using Queues
+* 232. Implement Queue using Stacks
+* 443. String Compression
 * 41. First Missing Positive
 * 726. Number of Atoms
 * 12. Integer to Roman
@@ -27,22 +30,3 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 **Tried:**
 * 744. Find Smallest Letter Greater Than Target
 * 407. Trapping Rain Water II - Hard
-
-**Add 2-nd solution for:**
-* 28. Implement strStr() - pi-function
-* 29. Divide Two Integers
-* 797. All Paths From Source to Target
-* 98. Validate Binary Search Tree
-* 104. Maximum Depth of Binary Tree
-* 226. Invert Binary Tree
-* 429. N-ary Tree Level Order Traversal
-* 589. N-ary Tree Preorder Traversal
-* 590. N-ary Tree Postorder Traversal
-* 617. Merge Two Binary Trees
-* 654. Maximum Binary Tree
-* 814. Binary Tree Pruning
-* 938. Range Sum of BST
-* 965. Univalued Binary Tree
-* 1038. Binary Search Tree to Greater Sum Tree
-* 1161. Maximum Level Sum of a Binary Tree
-* 100. Same Tree
