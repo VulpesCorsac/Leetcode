@@ -2,8 +2,8 @@ static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 
 class Solution {
 public:
     int maxSubarraySumCircular(vector<int>& A) {
-        long long ans1 = INT_MIN, ans2 = INT_MAX, ans3 = INT_MAX;
-        long long sum = 0;
+        long long ans1 = INT_MIN, ans2 = INT_MAX, ans3 = INT_MAX, sum = 0;
+        
         for (const auto& item : A)
             sum += item;
         
@@ -13,7 +13,7 @@ public:
             ans1 = max(curr, ans1);
         }
         
-        curr = ans1;
+        curr = ans2;
         for (auto it = A.begin()+1; it != A.end(); ++it) {
             curr = *it + min(curr, 0LL);
             ans2 = min(curr, ans2);
