@@ -9,7 +9,6 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 
 ## Todo:
 
-* Recursion I block:     https://leetcode.com/explore/featured/card/recursion-i/
 * Simple array block:    https://leetcode.com/explore/learn/card/fun-with-arrays/
 * Array block:           https://leetcode.com/explore/learn/card/array-and-string/
 * Queue and stack block: https://leetcode.com/explore/learn/card/queue-stack/
