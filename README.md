@@ -9,7 +9,6 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 
 ## Todo:
 
-* Queue and stack block: https://leetcode.com/explore/learn/card/queue-stack/ (6)
 * BT block:              https://leetcode.com/explore/learn/card/data-structure-tree/ (10)
 * BST block:             https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/ (6)
 * Trie block:            https://leetcode.com/explore/learn/card/trie/ (6)
