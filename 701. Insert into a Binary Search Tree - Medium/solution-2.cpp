@@ -11,6 +11,10 @@ static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {
+        if (!root) {
+            return new TreeNode(val);
+        }
+        
         auto tmp = root;
         
         if (root) {
