@@ -1,7 +1,7 @@
 import os
 
 testing = False
-renaming_folders = False
+renaming_folders = True
 
 if __name__ == '__main__':
     main_directory = os.path.dirname(os.path.realpath(__file__)) # getting curren script directory
