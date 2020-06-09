@@ -40,7 +40,7 @@ Output: [[3,null],[3,0],[3,null]]
 Input: head = []
 Output: []
 Explanation: Given linked list is empty (null pointer), so return null.
- 
+
 ```
 
 **Constraints:**

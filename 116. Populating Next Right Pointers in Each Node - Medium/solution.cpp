@@ -20,24 +20,24 @@ public:
 
 class Solution {
 public:
-    Node* connect(Node* root) {   
+    Node* connect(Node* root) {
         if (!root) {
             return nullptr;
         }
-        
+
         queue < Node* > q({root});
-        
+
         while (!q.empty()) {
             int level_size = q.size();
-            
+
             for (int i = level_size-1; i >= 0; --i) {
                 auto node = q.front();
                 q.pop();
-                
+
                 if (i) {
                     node->next = q.front();
                 }
-                
+
                 if (node->left) {
                     q.push(node->left);
                 }
@@ -46,7 +46,7 @@ public:
                 }
             }
         }
-        
+
         return root;
     }
 };

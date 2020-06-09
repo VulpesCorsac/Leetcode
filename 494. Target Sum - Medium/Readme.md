@@ -4,9 +4,9 @@ Find out how many ways to assign symbols to make sum of integers equal to target
 
 **Example 1:**
 ```
-Input: nums is [1, 1, 1, 1, 1], S is 3. 
+Input: nums is [1, 1, 1, 1, 1], S is 3.
 Output: 5
-Explanation: 
+Explanation:
 
 -1+1+1+1+1 = 3
 +1-1+1+1+1 = 3

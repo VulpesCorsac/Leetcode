@@ -10,5 +10,5 @@ class Solution:
         while head:
             vals += head.val,
             head = head.next
-        
+
         return vals == vals[::-1]

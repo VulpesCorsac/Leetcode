@@ -9,7 +9,7 @@ Return the same tree where every subtree (of the given tree) not containing a 1 
 Input: [1,null,0,0,1]
 Output: [1,null,0,null,1]
 ![](1028_2.png)
-Explanation: 
+Explanation:
 Only the red nodes satisfy the property "every subtree not containing a 1".
 The diagram on the right represents the answer.
 ```

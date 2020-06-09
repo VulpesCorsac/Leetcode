@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int reverse(int x) {
@@ -6,7 +7,7 @@ public:
         if (negative) {
             xx *= -1;
         }
-        
+
         long long result = 0;
         while (xx > 0) {
             result = 10*result + xx%10;
@@ -15,7 +16,7 @@ public:
         if (result > static_cast<long long>((1<<31) - 1)) {
             result = 0;
         }
-        
-        return negative ? -result : result; 
+
+        return negative ? -result : result;
     }
 };

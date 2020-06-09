@@ -9,7 +9,7 @@ A function's _exclusive_ _time_ is the number of units of time spent in this fun
 The CPU is **single threaded** which means that only one function is being executed at a given time unit.
 
 Return the exclusive time of each function, sorted by their function id.
- 
+
 
 **Example 1:**
 
@@ -23,7 +23,7 @@ Output: [3, 4]
 Explanation:
 Function 0 starts at the beginning of time 0, then it executes 2 units of time and reaches the end of time 1.
 Now function 1 starts at the beginning of time 2, executes 4 units of time and ends at time 5.
-Function 0 is running again at the beginning of time 6, and also ends at the end of time 6, thus executing for 1 unit of time. 
+Function 0 is running again at the beginning of time 6, and also ends at the end of time 6, thus executing for 1 unit of time.
 So function 0 spends 2 + 1 = 3 units of total time executing, and function 1 spends 4 units of total time executing.
 ```
 

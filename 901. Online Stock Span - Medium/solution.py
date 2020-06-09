@@ -1,5 +1,5 @@
 class StockSpanner:
-    
+
     def __init__(self):
         self.prices = []
         self.spans  = []
@@ -10,12 +10,12 @@ class StockSpanner:
         while index >= 0 and price >= self.prices[index]:
             span += self.spans[index]
             index -= self.spans[index]
-        
+
         self.spans.append(span)
         self.prices.append(price)
         return span
 
-    
+
 # Your StockSpanner object will be instantiated and called as such:
 # obj = StockSpanner()
 # param_1 = obj.next(price)

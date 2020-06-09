@@ -6,10 +6,10 @@ public:
         if (nums.empty()) {
             return 0;
         }
-        
+
         unordered_map < int, int > sums;
         int cnt = 0, sum = 0;
-        
+
         sums[0] = 1;
         for (const auto& item : nums) {
             sum += item;
@@ -18,7 +18,7 @@ public:
             }
             ++sums[sum];
         }
-        
+
         return cnt;
     }
 };

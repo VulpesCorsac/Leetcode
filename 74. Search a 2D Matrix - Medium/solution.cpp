@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class Solution {
 public:
@@ -9,10 +9,10 @@ public:
         if (!matrix[0].size()) {
             return false;
         }
-        
+
         int low = 0;
         int high = matrix.size()-1;
-        
+
         while (low < high) {
             int mid = (low + high) / 2;
             if (matrix[mid][0] < target) {
@@ -23,11 +23,11 @@ public:
                 high = mid-1;
             }
         }
-        
+
         if (matrix[low][0] > target && low > 0) {
             --low;
         }
-        
+
         return binary_search(matrix[low].begin(), matrix[low].end(), target);
     }
 };

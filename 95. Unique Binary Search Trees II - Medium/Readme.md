@@ -20,7 +20,7 @@ The above output corresponds to the 5 unique BST's shown below:
      3     2     1      1   3      2
     /     /       \                 \
    2     1         2                 3
-``` 
+```
 
 **Constraints:**
 

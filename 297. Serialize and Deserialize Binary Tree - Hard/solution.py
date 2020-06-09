@@ -15,26 +15,26 @@ class Codec:
                 helper(node.right)
             else:
                 ans.append('#')
-        
+
         ans = []
         helper(root)
         return ' '.join(ans)
-        
+
     def deserialize(self, data: str) -> 'TreeNode':
         def helper() -> 'TreeNode':
             value = next(values)
-            
+
             if value == '#':
                 return None
-            
+
             node = TreeNode(int(value))
             node.left  = helper()
             node.right = helper()
-            
+
             return node
-        
+
         values = iter(data.split())
-        
+
         return helper()
 
 # Your Codec object will be instantiated and called as such:

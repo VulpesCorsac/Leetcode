@@ -5,12 +5,12 @@ public:
     bool checkValidString(const string &s) {
         int lo = 0;
         int hi = 0;
-        
+
         for (const auto& c : s) {
             if (c == '(') {
                 ++lo;
                 ++hi;
-            } else if (c == ')') {                
+            } else if (c == ')') {
                 --lo;
                 --hi;
             } else {
@@ -18,12 +18,12 @@ public:
                 ++hi;
             }
             lo = max(lo, 0);
-                        
+
             if (hi < 0) {
                 return false;
             }
         }
-        
+
         return lo <= 0 && 0 <= hi;
     }
 };

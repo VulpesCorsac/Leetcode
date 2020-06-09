@@ -1,10 +1,11 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class FooBar {
 private:
     int n;
     std::atomic < bool > b {true};
 
 public:
-    FooBar(int n) 
+    FooBar(int n)
         : n(n) {
     }
 
@@ -13,9 +14,9 @@ public:
             while (!b.load(std::memory_order_acquire)) {
                 std::this_thread::yield();
             };
-            
+
             printFoo();
-            
+
             b.store(false, std::memory_order_release);
         }
     }
@@ -25,7 +26,7 @@ public:
             while (b.load(std::memory_order_acquire)) {
                 std::this_thread::yield();
             };
-            
+
             printBar();
             b.store(true, std::memory_order_release);
         }

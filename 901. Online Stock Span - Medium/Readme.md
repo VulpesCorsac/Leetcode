@@ -8,7 +8,7 @@ For example, if the price of a stock over the next 7 days were *[100, 80, 60, 70
 ```
 Input: ["StockSpanner","next","next","next","next","next","next","next"], [[],[100],[80],[60],[70],[60],[75],[85]]
 Output: [null,1,1,1,2,1,4,6]
-Explanation: 
+Explanation:
 First, S = StockSpanner() is initialized.  Then:
 S.next(100) is called and returns 1,
 S.next(80) is called and returns 1,

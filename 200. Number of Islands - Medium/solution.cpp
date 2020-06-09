@@ -4,10 +4,10 @@ class Solution {
 public:
     void dfs(int i, int j, vector < vector < char > >& grid) {
         grid[i][j] = '2';
-        
+
         int di[4] = {1, -1, 0, 0};
         int dj[4] = {0, 0, 1, -1};
-        
+
         for (int d = 0; d < 4; ++d) {
             if (i+di[d] >= 0 && i+di[d] < grid.size() &&
                 j+dj[d] >= 0 && j+dj[d] < grid[i+di[d]].size() &&
@@ -16,7 +16,7 @@ public:
             }
         }
     }
-    
+
     int numIslands(vector<vector<char>>& grid) {
         int islands = 0;
         for (int i = 0; i < grid.size(); ++i) {
@@ -27,7 +27,7 @@ public:
                 }
             }
         }
-        
+
         return islands;
     }
 };

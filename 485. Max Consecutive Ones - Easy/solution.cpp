@@ -4,7 +4,7 @@ public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
         int ans = 0;
         int temp = 0;
-        
+
         for (const auto& item : nums) {
             if (item) {
                 ++temp;
@@ -13,7 +13,7 @@ public:
                 temp = 0;
             }
         }
-        
+
         return ans;
     }
 };

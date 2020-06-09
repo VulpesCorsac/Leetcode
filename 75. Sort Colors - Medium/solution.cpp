@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class Solution {
 public:
@@ -6,7 +6,7 @@ public:
         int zeros = 0;
         int ones = 0;
         int twos = 0;
-        
+
         for (const auto& item: nums) {
             if (item == 0) {
                 ++zeros;
@@ -14,7 +14,7 @@ public:
                 ++ones;
             } else {
                 ++twos;
-            }   
+            }
         }
 
         for (int i = 0; i < nums.size(); ++i) {
@@ -26,7 +26,7 @@ public:
                 nums[i] = 2;
             }
         }
-		
+
 		return;
     }
 
@@ -34,7 +34,7 @@ public:
         int low = 0;
         int mid = 0;
         int high = nums.size()-1;
-        
+
         while (mid <= high) {
             if (nums[mid] == 0) {
                 swap(nums[mid], nums[low]);

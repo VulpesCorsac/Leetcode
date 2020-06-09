@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     bool isHappy(int n) {
@@ -16,10 +16,10 @@ public:
                 n /= 10;
                 new_n += digit*digit;
             }
-            
+
             n = new_n;
         }
-        
+
         return true;
     }
 };

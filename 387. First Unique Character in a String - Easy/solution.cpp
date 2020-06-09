@@ -5,7 +5,7 @@ public:
         if (s.empty()) {
             return -1;
         }
-        
+
         int cnt[26] = {0};
         for (auto& c: s)
             ++cnt[c-'a'];

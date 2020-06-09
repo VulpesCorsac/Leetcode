@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Foo {
 private:
     std::promise < void >  p1;

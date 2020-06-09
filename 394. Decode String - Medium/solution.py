@@ -1,9 +1,9 @@
 class Solution:
     def decodeString(self, s: str) -> str:
-        stack = [] 
+        stack = []
         current_number = 0
         current_string = ''
-        
+
         for symbol in s:
             if symbol == '[':
                 stack.append(current_string)
@@ -18,5 +18,5 @@ class Solution:
                 current_number = current_number * 10 + int(symbol)
             else:
                 current_string += symbol
-        
+
         return current_string

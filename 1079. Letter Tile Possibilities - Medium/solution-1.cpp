@@ -1,11 +1,11 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int numTilePossibilities(string tiles) {
         set < string > unique;
-        
+
         sort(tiles.begin(), tiles.end());
-        
+
         do {
             for (int st = 0; st < tiles.length(); ++st) {
                 for (int len = 1; len <= tiles.length()-st; ++len) {
@@ -13,7 +13,7 @@ public:
                 }
             }
         } while (next_permutation(tiles.begin(), tiles.end()));
-        
+
         return unique.size();
     }
 };

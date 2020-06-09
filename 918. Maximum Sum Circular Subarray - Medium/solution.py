@@ -19,5 +19,5 @@ class Solution:
             cur = A[i] + min(cur, 0)
             ans3 = min(ans3, cur)
         ans3 = sum(A) - ans3
-        
+
         return max(ans1, ans2, ans3)

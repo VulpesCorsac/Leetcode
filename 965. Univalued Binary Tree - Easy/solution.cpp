@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -7,14 +8,13 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
 class Solution {
 public:
     bool isUnivalTree(TreeNode* root) {
         if (!root) {
             return true;
         }
-        
+
         if (root->left) {
             if (root->val != root->left->val) {
                 return false;
@@ -25,7 +25,7 @@ public:
                 return false;
             }
         }
-    
+
         return isUnivalTree(root->left) && isUnivalTree(root->right);
     }
 };

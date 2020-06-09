@@ -2,7 +2,7 @@ Given the root node of a binary search tree (BST) and a value to be inserted int
 
 Note that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion. You can return any of them.
 
-For example, 
+For example,
 ```
 Given the tree:
         4
@@ -26,7 +26,7 @@ This tree is also valid:
          5
        /   \
       2     7
-     / \   
+     / \
     1   3
          \
           4

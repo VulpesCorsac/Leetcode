@@ -23,16 +23,16 @@ public:
         if(!head) {
             return nullptr;
         }
-        
+
         if(m[head]) {
             return m[head];
         }
-        
+
         m[head]         = new Node(head->val);
         m[head]->next   = copyRandomList(head->next);
         m[head]->random = copyRandomList(head->random);
-        
-        return m[head];        
+
+        return m[head];
     }
 
 private:

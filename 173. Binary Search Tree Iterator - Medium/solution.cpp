@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 /**
  * Definition for a binary tree node.
@@ -16,12 +16,12 @@ public:
     BSTIterator(TreeNode* root) {
         traverse(root);
     }
-    
+
     /** @return the next smallest number */
     int next() {
         return flattened[idx++];
     }
-    
+
     /** @return whether we have a next smallest number */
     bool hasNext() {
         return idx != flattened.size();
@@ -32,7 +32,7 @@ private:
         if (!root) {
             return;
         }
-        
+
         traverse(root->left);
         flattened.push_back(root->val);
         traverse(root->right);

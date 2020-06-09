@@ -2,10 +2,10 @@ class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         graph = [[] for _ in range(numCourses)]
         visit = [0  for _ in range(numCourses)]
-        
+
         for x, y in prerequisites:
             graph[x].append(y)
-            
+
         def dfs(i):
             if visit[i] == -1:
                 return False
@@ -17,9 +17,9 @@ class Solution:
                     return False
             visit[i] = 1
             return True
-        
+
         for i in range(numCourses):
             if not dfs(i):
                 return False
-        
-        return True        
+
+        return True

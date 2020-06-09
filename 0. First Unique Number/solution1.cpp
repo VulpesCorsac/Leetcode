@@ -7,14 +7,14 @@ public:
             add(item);
         }
     }
-    
+
     int showFirstUnique() {
         if (unique_numbers.empty()) {
             return -1;
         }
         return unique_numbers.front();
     }
-    
+
     void add(int value) {
         if (cnt[value] == 0) {
             unique_numbers.push_back(value);
@@ -27,7 +27,7 @@ public:
         }
         ++cnt[value];
     }
-    
+
     list < int > unique_numbers;
     unordered_map < int , int > cnt;
     unordered_map < int , list < int >::iterator > pos;

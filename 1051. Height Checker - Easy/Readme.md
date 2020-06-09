@@ -8,7 +8,7 @@ Notice that when a group of students is selected they can reorder in any possibl
 ```
 Input: heights = [1,1,4,2,1,3]
 Output: 3
-Explanation: 
+Explanation:
 Current array : [1,1,4,2,1,3]
 Target array  : [1,1,1,2,3,4]
 On index 2 (0-based) we have 4 vs 1 so we have to move this student.

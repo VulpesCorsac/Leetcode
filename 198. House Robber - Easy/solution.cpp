@@ -5,16 +5,16 @@ public:
         if (nums.empty()) {
             return 0;
         }
-        
+
         int prev = 0;
         int curr = 0;
-        
+
         for (const auto& item : nums) {
             auto tmp = prev;
             prev = max(curr + item, prev);
             curr = tmp;
         }
-        
+
         return prev;
     }
 };

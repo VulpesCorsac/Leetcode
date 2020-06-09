@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -22,7 +23,7 @@ public:
         istringstream in(data);
         return deserialize(in);
     }
-    
+
 private:
     void serialize(TreeNode* root, ostringstream& out) {
         if (root) {
@@ -41,7 +42,7 @@ private:
         if (val == "#") {
             return nullptr;
         }
-        
+
         return new TreeNode(stoi(val), deserialize(in), deserialize(in));
     }
 };

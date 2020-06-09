@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class ZeroEvenOdd {
 private:
     int n;
@@ -6,7 +7,7 @@ private:
     mutex m;
     condition_variable cv;
 public:
-    ZeroEvenOdd(int n) 
+    ZeroEvenOdd(int n)
         : n(n)
         , cnt(1)
         , print_zero(true) {
@@ -17,7 +18,7 @@ public:
         while (cnt <= n) {
             unique_lock < mutex > lock(m);
             cv.wait(lock, [this] () { return print_zero; } );
-            
+
             if (cnt <= n) {
                 printNumber(0);
             }
@@ -36,7 +37,7 @@ public:
                 printNumber(cnt++);
                 print_zero = true;
             }
-            
+
             cv.notify_all();
         }
         return;
@@ -46,12 +47,12 @@ public:
         while (cnt <= n) {
             unique_lock < mutex > lock(m);
             cv.wait(lock, [this] () { return !print_zero && !(cnt & 1); } );
-            
+
             if (cnt <= n) {
                 printNumber(cnt++);
                 print_zero = true;
             }
-            
+
             cv.notify_all();
         }
         return;

@@ -58,7 +58,7 @@ Explanation: This an empty graph, it does not have any nodes.
 ```
 Input: adjList = [[2],[1]]
 Output: [[2],[1]]
-``` 
+```
 
 **Constraints:**
 

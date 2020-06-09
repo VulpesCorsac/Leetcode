@@ -9,9 +9,9 @@ class Solution:
     def isCousins(self, root: TreeNode, x: int, y: int) -> bool:
         if not root or root.val == x or root.val == y:
             return False
-    
+
         queue = deque([root])
-               
+
         while queue:
             size = len(queue)
             is_x_exist = False
@@ -22,13 +22,13 @@ class Solution:
                     is_x_exist = True
                 elif node.val == y:
                     is_y_exist = True
-                
+
                 if node.left and node.right:
                     if set([node.left.val, node.right.val]) == set([x, y]):
                         return False
-                if node.left: 
+                if node.left:
                     queue.append(node.left)
-                if node.right: 
+                if node.right:
                     queue.append(node.right)
             if is_x_exist and is_y_exist:
                 return True

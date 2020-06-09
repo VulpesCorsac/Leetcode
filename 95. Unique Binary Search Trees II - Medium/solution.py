@@ -7,7 +7,7 @@
 class Solution:
     def generateTrees(self, last: int) -> List[TreeNode]:
         return self.generateTreesHelper(1, last) if last else []
-    
+
     @functools.lru_cache(None)
     def generateTreesHelper(self, first: int, last: int) -> List[TreeNode]:
         return [TreeNode(root, left, right)

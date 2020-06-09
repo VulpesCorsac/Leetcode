@@ -1,20 +1,20 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int numUniqueEmails(vector<string>& emails) {
         unordered_map < string , int > unique_emails;
-        
+
         for (const auto& item: emails) {
             unique_emails[filter(item)] = 1;
         }
-        
+
         return unique_emails.size();
     }
-    
+
     string filter(string s) {
         string ans = s;
         int ans_pos = 0;
-        
+
         int stage = 0;
         // 0 - taking local name
         // 1 - ignoring local name
@@ -27,7 +27,7 @@ public:
                 stage = 1;
             } else if (s[i] == '.') {
                 if (stage == 2) {
-                    ans[ans_pos++] = '.';                
+                    ans[ans_pos++] = '.';
                 }
             } else {
                 if (stage != 1) {
@@ -35,9 +35,9 @@ public:
                 }
             }
         }
-        
+
         ans.resize(ans_pos);
-        
+
         return ans;
     }
 };

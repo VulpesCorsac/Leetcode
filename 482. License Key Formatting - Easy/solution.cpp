@@ -1,8 +1,9 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     string licenseKeyFormatting(string S, int K) {
         string result;
-        
+
         int counter = 0;
         for (auto it = S.rbegin(); it != S.rend(); ++it) {
             if (*it != '-') {
@@ -13,9 +14,9 @@ public:
                 result += toupper(*it);
             }
         }
-        
+
         reverse(result.begin(), result.end());
-        
+
         return result;
     }
 };

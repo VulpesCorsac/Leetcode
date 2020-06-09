@@ -7,7 +7,7 @@ The move sequence is represented by a string, and the character moves[i] represe
 **Example 1:**
 ```
 Input: "UD"
-Output: true 
+Output: true
 Explanation: The robot moves up once, and then down once. All moves have the same magnitude, so it ended up at the origin where it started. Therefore, we return true.
 ```
 **Example 2:**

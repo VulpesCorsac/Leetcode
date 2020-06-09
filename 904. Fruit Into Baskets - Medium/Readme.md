@@ -40,7 +40,7 @@ Input: [3,3,3,1,2,1,1,2,3,3,4]
 Output: 5
 Explanation: We can collect [1,2,1,1,2].
 If we started at the first tree or the eighth tree, we would only collect 4 fruits.
-``` 
+```
 
 **Note:**
 * *1 <= tree.length <= 40000*

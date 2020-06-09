@@ -10,19 +10,19 @@ public:
             }
         }
     }
-    
+
     int showFirstUnique() {
         while(!q.empty() && count[q.front()] > 1){
             q.pop();
         }
-        
+
         if(q.empty()){
             return -1;
         } else{
             return q.front();
         }
     }
-    
+
     void add(int value) {
         ++count[value];
         if(count[value] == 1) {

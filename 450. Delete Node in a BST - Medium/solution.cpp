@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 /**
  * Definition for a binary tree node.
@@ -17,7 +17,7 @@ public:
         if (!root) {
             return nullptr;
         }
-        
+
         if (key < root->val) {
             root->left = deleteNode(root->left, key);
         } else if (key > root->val) {
@@ -25,27 +25,27 @@ public:
         } else {
             if (!root->left) {
                 auto ans = root->right;
-                
+
                 delete root;
-                
+
                 return ans;
             } else if (!root->right) {
                 auto ans = root->left;
-                
+
                 delete root;
-                
+
                 return ans;
             } else {
                 auto node = root->right;
                 while (node->left) {
                     node = node->left;
                 }
-                
+
                 root->val = node->val;
                 root->right = deleteNode(root->right, root->val);
             }
         }
-        
+
         return root;
     }
 };

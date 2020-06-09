@@ -17,7 +17,7 @@ Initially, all next pointers are set to *NULL*.
 
 * You may only use constant extra space.
 * Recursive approach is fine, you may assume implicit stack space does not count as extra space for this problem.
- 
+
 **Example 1:**
 
 ![](116_sample.png)

@@ -1,4 +1,4 @@
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class DiningPhilosophers {
     std::mutex mutex;
@@ -21,15 +21,15 @@ public:
             std::unique_lock < std::mutex > lock(mutex);
             cv.wait(lock, [this, philosopher]() { return isvalid[philosopher] && isvalid[(philosopher + 1) % N]; } );
             isvalid[philosopher] = isvalid[(philosopher + 1) % N] = 0;
-            pickLeftFork(); 
+            pickLeftFork();
             pickRightFork();
         }
-        
+
         eat();
-        
+
         {
             std::unique_lock < std::mutex > lock(mutex);
-            putLeftFork(); 
+            putLeftFork();
             putRightFork();
             isvalid[philosopher] = isvalid[(philosopher + 1) % N] = 1;
             cv.notify_all();

@@ -2,7 +2,7 @@ Given a binary search tree and the lowest and highest boundaries as L and R, tri
 
 **Example 1:**
 ```
-Input: 
+Input:
     1
    / \
   0   2
@@ -10,7 +10,7 @@ Input:
   L = 1
   R = 2
 
-Output: 
+Output:
     1
       \
        2
@@ -18,7 +18,7 @@ Output:
 
 **Example 2:**
 ```
-Input: 
+Input:
     3
    / \
   0   4
@@ -30,10 +30,10 @@ Input:
   L = 1
   R = 3
 
-Output: 
+Output:
       3
-     / 
-   2   
+     /
+   2
   /
  1
 ```

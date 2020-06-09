@@ -17,11 +17,11 @@ public:
         if (!root) {
             return false;
         }
-        
+
         if (root->val == sum && !root->left && !root->right) {
             return true;
         }
-        
+
         sum -= root->val;
         return hasPathSum(root->left, sum) || hasPathSum(root->right, sum);
     }

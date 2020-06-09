@@ -8,7 +8,7 @@ public:
             acc.push_back(total);
         }
     }
-    
+
     int pickIndex() {
         int r = rand() % total;
         auto itor = upper_bound(acc.begin(), acc.end(), r);

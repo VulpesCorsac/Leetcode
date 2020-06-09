@@ -1,4 +1,4 @@
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -13,7 +13,7 @@ public:
         auto to_delete = node->next;
         node->val = to_delete->val;
         node->next = to_delete->next;
-        
+
         delete to_delete;
     }
 };

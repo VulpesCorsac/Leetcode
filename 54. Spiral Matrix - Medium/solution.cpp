@@ -4,7 +4,7 @@ public:
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector < vector < int > > dirs{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
         vector < int > res;
-        
+
         int N = matrix.size();
         if (!N) {
             return res;
@@ -28,7 +28,7 @@ public:
             nSteps[dir_idx%2]--;
             dir_idx = (dir_idx + 1) % 4;
         }
-        
+
         return res;
     }
 };

@@ -25,7 +25,7 @@ Output: true
 ```
 Input: root = [1,2,3,null,4], x = 2, y = 3
 Output: false
-``` 
+```
 
 **Note:**
 * The number of nodes in the tree will be between *2* and *100*.

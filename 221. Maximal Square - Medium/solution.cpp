@@ -5,17 +5,17 @@ public:
         if (matrix.empty()) {
             return 0;
         }
-        
+
         const int n = matrix.size();
         const int m = matrix[0].size();
-        
+
         int dp[n+1][m+1];
         for (int i = 0; i <= n; ++i) {
             for (int j = 0; j <= m; ++j) {
                 dp[i][j] = 0;
             }
         }
-        
+
         int max_size = 0;
         for (int i = 1; i <= n; ++i) {
             for (int j = 1; j <= m; ++j) {
@@ -25,7 +25,7 @@ public:
                 }
             }
         }
-        
+
         return max_size*max_size;
     }
 };

@@ -16,11 +16,11 @@ public:
         if (!root) {
             return {};
         }
-        
+
         vector < int > ans;
         stack < TreeNode* > nodes;
         TreeNode* last = nullptr;
-        
+
         while (root || !nodes.empty()) {
             if (root) {
                 nodes.push(root);
@@ -36,7 +36,7 @@ public:
                 }
             }
         }
-        
+
         return ans;
     }
 };

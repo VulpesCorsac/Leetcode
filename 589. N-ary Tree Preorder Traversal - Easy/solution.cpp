@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /*
 // Definition for a Node.
 class Node {
@@ -13,27 +14,26 @@ public:
     }
 };
 */
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
 class Solution {
 public:
     vector<int> preorder(Node* root) {
         result.clear();
-        
+
         addToVec(root);
-        
+
         return result;
     }
-    
+
     void addToVec(Node* root) {
         if (!root) {
             return;
         }
-        
+
         result.push_back(root->val);
         for (auto& child: root->children) {
             addToVec(child);
         }
     }
-    
+
     vector < int > result;
 };

@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,7 +7,6 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -24,28 +24,28 @@ public:
                 return result;
             }
         }
-        
+
         if (l1 && !l2) {
             ListNode* result = new ListNode(l1->val + carry);
-            
+
             carry = result->val / 10;
             result->val %= 10;
-            
+
             result->next = addTwoNumbers(nullptr, l1->next);
-            
+
             return result;
         }
         if (!l1 && l2) {
             ListNode* result = new ListNode(l2->val + carry);
-            
+
             carry = result->val / 10;
             result->val %= 10;
-            
+
             result->next = addTwoNumbers(nullptr, l2->next);
 
             return result;
         }
-        
+
         ListNode* result = new ListNode(l1->val + l2->val + carry);
 
         carry = result->val / 10;
@@ -55,6 +55,6 @@ public:
 
         return result;
     }
-    
+
     int carry = 0;
 };

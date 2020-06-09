@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class Solution {
 public:
@@ -8,7 +8,7 @@ public:
         } else {
             auto from = result.size();
             result.resize(n+1);
-            
+
             for (int i = from; i < result.size(); ++i) {
                 if (i < 2) {
                     result[i] = 1;
@@ -16,11 +16,11 @@ public:
                     result[i] = result[i-1] + result[i-2];
                 }
             }
-            
-            return result[n];            
+
+            return result[n];
         }
     }
-    
+
     vector < int > result;
 
     int climbStairs(int n) {

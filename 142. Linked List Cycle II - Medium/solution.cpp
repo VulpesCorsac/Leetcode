@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -6,7 +7,6 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
@@ -29,6 +29,6 @@ public:
                 return cycle;
             }
         }
-        return nullptr;  
+        return nullptr;
     }
 };

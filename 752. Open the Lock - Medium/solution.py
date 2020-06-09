@@ -4,10 +4,10 @@ class Solution:
         positions = ["0000"]
         moves = 0
         move = {str(i): [str((i + 1) % 10), str((i - 1) % 10)] for i in range(10)}
-        
+
         if "0000" in deadends:
             return -1
-        
+
         while positions:
             next = []
             moves += 1
@@ -20,5 +20,5 @@ class Solution:
                             next.append(current)
                             deadends.add(current)
             positions = next
-        
+
         return -1

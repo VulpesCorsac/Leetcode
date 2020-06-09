@@ -16,11 +16,11 @@ public:
         if (!root) {
             return {};
         }
-        
+
         vector < int > ans;
         stack < TreeNode* > nodes;
         nodes.push(root);
-        
+
         while (!nodes.empty()) {
             auto node = nodes.top();
             nodes.pop();
@@ -32,7 +32,7 @@ public:
                 nodes.push(node->left);
             }
         }
-        
+
         return ans;
     }
 };

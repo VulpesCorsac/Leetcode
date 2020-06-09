@@ -3,7 +3,7 @@ class Solution {
 public:
     string countAndSay(int n) {
         string res = "1";
-        
+
         while (--n) {
             string cur = "";
             for (int i = 0; i < res.length(); ++i) {
@@ -12,12 +12,12 @@ public:
                     ++i;
                     ++cnt;
                 }
-                
+
                 cur += to_string(cnt) + res[i];
             }
             res = cur;
         }
-        
+
         return res;
     }
 };

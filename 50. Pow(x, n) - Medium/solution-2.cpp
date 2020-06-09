@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     double myPow(double x, int n) {
@@ -8,7 +8,7 @@ public:
             return binpow(1/x, -n);
         return 1;
     }
-    
+
     double binpow(double a, int n) {
         double res = 1;
         while (n) {

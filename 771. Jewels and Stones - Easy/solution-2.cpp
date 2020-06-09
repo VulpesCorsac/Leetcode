@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int numJewelsInStones(string J, string S) {
@@ -8,7 +9,7 @@ public:
                 solution++;
             }
         }
-		
+
         return solution;
     }
 };

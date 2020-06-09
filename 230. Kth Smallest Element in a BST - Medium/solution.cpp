@@ -1,4 +1,4 @@
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();    
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -19,17 +19,17 @@ public:
                 st.push(root);
                 root = root->left;
             }
-            
+
             root = st.top();
             st.pop();
-            
+
             --k;
-            
+
             if (!k) {
                 return root->val;
             }
-            
-            
+
+
             root = root->right;
         }
     }

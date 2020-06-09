@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     enum Operations {
@@ -6,16 +6,16 @@ public:
         And,
         Or
     };
-    
+
     bool parseBoolExpr(string expression) {
         stack < Operations > operations;
         stack < stack < bool > > variables;
         variables.push({});
-        
+
         set < char > brackets_set = {'(', ')'};
         set < char > operations_set = {'&', '|', '!'};
         set < char > variables_set = {'t', 'f'};
-        
+
         auto it = expression.begin();
         while (it != expression.end()) {
             if (operations_set.count(*it)) {
@@ -51,10 +51,10 @@ public:
             } else if (variables_set.count(*it)) {
                 variables.top().push(*it == 't');
             }
-            
+
             ++it;
         }
-        
+
         return variables.top().top();
     }
 };

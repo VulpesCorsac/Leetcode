@@ -1,12 +1,13 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class FizzBuzz {
 private:
     int n;
     int cnt;
     mutex m;
     condition_variable cv;
-    
+
 public:
-    FizzBuzz(int n) 
+    FizzBuzz(int n)
         : n(n)
         , cnt(1) {
     }
@@ -21,7 +22,7 @@ public:
             if (cnt > n) {
                 return;
             }
-            
+
             printFizz();
             ++cnt;
             cv.notify_all();
@@ -38,7 +39,7 @@ public:
             if (cnt > n) {
                 return;
             }
-            
+
             printBuzz();
             ++cnt;
             cv.notify_all();
@@ -55,7 +56,7 @@ public:
             if (cnt > n) {
                 return;
             }
-            
+
             printFizzBuzz();
             ++cnt;
             cv.notify_all();
@@ -72,10 +73,10 @@ public:
             if (cnt > n) {
                 return;
             }
-            
+
             printNumber(cnt);
             ++cnt;
             cv.notify_all();
-        }        
+        }
     }
 };

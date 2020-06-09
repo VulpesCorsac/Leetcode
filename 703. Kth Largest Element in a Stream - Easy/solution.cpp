@@ -1,8 +1,8 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class KthLargest {
 public:
-    KthLargest(int k, vector < int > & nums) 
+    KthLargest(int k, vector < int > & nums)
         : size(k) {
         for(const auto& item : nums) {
             pq.push(item);
@@ -11,7 +11,7 @@ public:
             }
         }
     }
-    
+
     int add(int val) {
         pq.push(val);
         if (pq.size() > size) {

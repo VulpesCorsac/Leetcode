@@ -13,7 +13,7 @@ Return the minimum possible value of *D.length*.
 Input: ["cba","daf","ghi"]
 Input: ["cba","daf","ghi"]
 Output: 1
-Explanation: 
+Explanation:
 After choosing D = {1}, each column ["c","d","g"] and ["a","f","i"] are in non-decreasing sorted order.
 If we chose D = {}, then a column ["b","a","h"] would not be in non-decreasing sorted order.
 ```

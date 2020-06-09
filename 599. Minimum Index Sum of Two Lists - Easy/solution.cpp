@@ -12,7 +12,7 @@ public:
         int min_sum = INT_MAX;
         for (int j = 0; j < list2.size(); ++j) {
             auto found = m.find(list2[j]);
-            
+
             if (found != m.end()) {
                 int sum = j + (*found).second;
                 if (sum < min_sum) {
@@ -24,7 +24,7 @@ public:
                 }
             }
         }
-        
+
         return ans;
     }
 };

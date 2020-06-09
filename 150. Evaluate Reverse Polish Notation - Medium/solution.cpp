@@ -9,9 +9,9 @@ public:
             { "*" , [] (int a, int b) { return a * b; } },
             { "/" , [] (int a, int b) { return a / b; } }
         };
-        
+
         stack < int > st;
-        
+
         for (const auto& token : tokens) {
             if (!map.count(token)) {
                 st.push(stoi(token));

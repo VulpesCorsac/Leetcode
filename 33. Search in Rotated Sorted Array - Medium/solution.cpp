@@ -1,15 +1,15 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
         int l = 0;
         int r = nums.size() - 1;
-        
-        while (l <= r) {           
+
+        while (l <= r) {
             int m = l + (r - l) / 2;
-            
+
 //            cout << nums[l] << " " << nums[m] << " " << nums[r] << "\n";
-            
+
             if (nums[l] == target) {
                 return l;
             }
@@ -19,7 +19,7 @@ public:
             if (nums[r] == target) {
                 return r;
             }
-            
+
             if (nums[m] > nums[l]) {
                 if (target > nums[m]) {
                     l = m+1;
@@ -45,7 +45,7 @@ public:
         if (r+1 < nums.size() && nums[r+1] == target) {
             return r+1;
         }
-        
+
         return -1;
     }
 };

@@ -6,7 +6,7 @@ An expression can either be:
 * *"!(expr)"*, evaluating to the logical *NOT* of the inner expression *expr*;
 * *"&(expr1,expr2,...)"*, evaluating to the logical *AND* of 2 or more inner expressions *expr1, expr2, ...*;
 * *"|(expr1,expr2,...)"*, evaluating to the logical *OR* of 2 or more inner expressions *expr1, expr2, ...*
- 
+
 **Example 1:**
 ```
 Input: expression = "!(f)"

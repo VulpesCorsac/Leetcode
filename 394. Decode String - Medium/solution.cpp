@@ -6,11 +6,11 @@ public:
         int pos = 0;
         return helper(s, pos);
     }
-    
+
     string helper(const string& s, int& pos) {
         int number = 0;
         string current_string = "";
-        
+
         for (; pos < s.length(); ++pos) {
             auto symbol = s[pos];
             if (symbol == '[') {
@@ -24,9 +24,9 @@ public:
                 number = number * 10 + symbol - '0';
             } else {
                 current_string += symbol;
-            }                
+            }
         }
-        
+
         return current_string;
     }
 };

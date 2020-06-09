@@ -10,7 +10,7 @@ Design a discipline of behaviour (a concurrent algorithm) such that no philosoph
 
 The problem statement and the image above are taken from wikipedia.org
 
- 
+
 
 The philosophers' ids are numbered from **0** to **4** in a clockwise order. Implement the function *void wantsToEat(philosopher, pickLeftFork, pickRightFork, eat, putLeftFork, putRightFork)* where:
 

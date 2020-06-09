@@ -1,9 +1,9 @@
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class H2O {
     mutex m_hydrogen, m_oxygen;
     int count;
-    
+
 public:
     H2O()
         : count(0) {

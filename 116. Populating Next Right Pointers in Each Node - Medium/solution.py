@@ -11,7 +11,7 @@ class Node:
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
         res = root
-        
+
         while root and root.left:
             next = root.left
             while root:
@@ -19,5 +19,5 @@ class Solution:
                 root.right.next = root.next and root.next.left
                 root = root.next
             root = next
-        
+
         return res

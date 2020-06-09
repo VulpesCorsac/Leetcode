@@ -5,7 +5,7 @@ public:
         if (s.empty()) {
             return s;
         }
-        
+
         std::istringstream iss(s);
         string result = "";
 
@@ -13,7 +13,7 @@ public:
         while (iss >> w) {
             result = w + " " + result;
         }
-        
+
         if (result.size() > 0) {
             result.pop_back();
         }

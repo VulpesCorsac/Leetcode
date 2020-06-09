@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /// from https://leetcode.com/problems/bitwise-and-of-numbers-range/discuss/566075/(C%2B%2B)-O(1)-0ms-6.1Mb-Bit-manip-single-line-solution-w-explanation-100-100
 
 /*
@@ -34,7 +35,6 @@ public:
 
 */
 
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int rangeBitwiseAnd(int m, int n) {

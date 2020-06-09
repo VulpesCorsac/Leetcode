@@ -15,15 +15,15 @@ class Solution {
 public:
     vector < TreeNode* > findDuplicateSubtrees(TreeNode* root) {
         serialize(root);
-        
-        
+
+
         vector < TreeNode* > ans;
         for (auto [k, v] : map) {
             if (v.size() > 1) {
                 ans.push_back(v[0]);
             }
         }
-        
+
         return ans;
     }
 
@@ -34,11 +34,11 @@ private:
         if (!node) {
             return "#";
         }
-        
+
         string s = "(" + serialize(node->left) + to_string(node->val) + serialize(node->right) + ")";
-        
+
         map[s].push_back(node);
-        
+
         return s;
     }
 };

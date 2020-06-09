@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -7,13 +8,12 @@
  * };
  */
 
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
 
 class Solution {
 public:
     ListNode* deleteDuplicates(ListNode* head) {
         auto result = head;
-        
+
         while (head) {
             if (head->next) {
                 if (head->val == head->next->val) {
@@ -27,7 +27,7 @@ public:
                 break;
             }
         }
-        
+
         return result;
     }
 };

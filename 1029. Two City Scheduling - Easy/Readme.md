@@ -6,7 +6,7 @@ Return the minimum cost to fly every person to a city such that exactly N people
 ```
 Input: [[10,20],[30,200],[400,50],[30,20]]
 Output: 110
-Explanation: 
+Explanation:
 The first person goes to city A for a cost of 10.
 The second person goes to city A for a cost of 30.
 The third person goes to city B for a cost of 50.

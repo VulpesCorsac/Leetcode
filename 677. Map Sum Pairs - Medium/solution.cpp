@@ -3,15 +3,15 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 class MapSum {
 public:
     /** Initialize your data structure here. */
-    MapSum() 
+    MapSum()
         : root(new TrieNode(0)) {
-        
+
     }
-    
+
     void insert(string key, int val) {
         return insert_helper(key, val);
     }
-    
+
     int sum(string prefix) const noexcept {
         return sum_helper(prefix);
     }
@@ -22,30 +22,30 @@ public:
         int total;
         int value;
         bool end_of_word;
-        
-        TrieNode(int value = 0) 
+
+        TrieNode(int value = 0)
             : total(value)
-            , value(value) 
+            , value(value)
             , end_of_word(false) {
-            
+
         }
     };
-    
+
     int sum_helper(const string& key) const noexcept {
         auto node = get(key, false);
-        
+
         return node ? node->total : 0;
     }
 
     void insert_helper(const string& key, int val) {
         int old = get(key, true)->value;
-        
+
         auto node = root;
         for (const auto& c : key) {
             node->total += val - old;
             node = node->children[c];
         }
-        
+
         node->value = val;
         node->total += val - old;
         node->end_of_word = true;
@@ -53,7 +53,7 @@ public:
 
     TrieNode* get(const string& key, bool create) const noexcept {
         auto node = root;
-        
+
         for (const auto& c : key) {
             if (!node->children.count(c)) {
                 if (create) {
@@ -62,14 +62,14 @@ public:
                     return nullptr;
                 }
             }
-            
+
             node = node->children[c];
         }
-        
+
         return node;
     }
 
-protected: 
+protected:
     TrieNode* root;
 };
 

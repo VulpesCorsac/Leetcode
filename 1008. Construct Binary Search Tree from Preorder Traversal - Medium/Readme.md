@@ -9,7 +9,7 @@ Output: [8,5,10,1,7,null,12]
 
 ![](1266.png)
 ```
- 
+
 **Note:**
 
 * *1 <= preorder.length <= 100*

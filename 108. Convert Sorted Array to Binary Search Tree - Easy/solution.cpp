@@ -25,12 +25,12 @@ private:
             return new TreeNode(nums[l]);
         } else {
             int m = l + (r - l) / 2;
-            
+
             auto root = new TreeNode(nums[m]);
             root->left  = helper(nums, l, m-1);
             root->right = helper(nums, m+1, r);
-            
+
             return root;
         }
-    }    
+    }
 };

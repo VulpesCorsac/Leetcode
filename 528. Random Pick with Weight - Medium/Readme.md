@@ -8,7 +8,7 @@ Given an array *w* of positive integers, where *w[i]* describes the weight of in
 
 **Example 1:**
 ```
-Input: 
+Input:
 ["Solution","pickIndex"]
 [[[1]],[]]
 Output: [null,0]
@@ -16,7 +16,7 @@ Output: [null,0]
 
 **Example 2:**
 ```
-Input: 
+Input:
 ["Solution","pickIndex","pickIndex","pickIndex","pickIndex","pickIndex"]
 [[[1,3]],[],[],[],[],[]]
 Output: [null,0,1,1,1,0]

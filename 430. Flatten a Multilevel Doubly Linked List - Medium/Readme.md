@@ -68,7 +68,7 @@ Merging the serialization of each level and removing trailing nulls we obtain:
 
 ```
 [1,2,3,4,5,6,null,null,null,7,8,9,10,null,null,11,12]
-``` 
+```
 
 **Constraints:**
 

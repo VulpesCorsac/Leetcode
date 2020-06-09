@@ -1,3 +1,4 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 /*
 // Definition for a Node.
 class Node {
@@ -13,32 +14,31 @@ public:
     }
 };
 */
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
 class Solution {
 public:
     vector<vector<int>> levelOrder(Node* root) {
         func(root, 0);
-        
+
         return result;
     }
-    
+
     void func(Node* root, int depth) {
         if (!root) {
             return;
         }
-        
+
         if (result.size() <= depth) {
             result.resize(depth+1);
         }
-        
+
         result[depth].push_back(root->val);
-        
+
         for (auto& child: root->children) {
             func(child, depth+1);
         }
-        
+
         return;
     }
-    
+
     vector<vector<int>> result;
 };

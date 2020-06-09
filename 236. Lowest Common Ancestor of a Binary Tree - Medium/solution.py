@@ -8,7 +8,7 @@
 class Solution:
     def __init__(self):
         self.ans = None
-        
+
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         def recurse_tree(current_node):
             if not current_node:
@@ -25,5 +25,5 @@ class Solution:
             return mid or left or right
 
         recurse_tree(root)
-        
+
         return self.ans

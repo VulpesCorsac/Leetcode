@@ -3,7 +3,7 @@ class Solution {
 public:
     vector < vector < int > > graph;
     vector < int > visited;
-    
+
     bool dfs(int v) {
         if (visited[v] == 1) {
             return false;
@@ -11,7 +11,7 @@ public:
         if (visited[v] == 2) {
             return true;
         }
-        
+
         visited[v] = 1;
         for (const auto& next : graph[v]) {
             if (!dfs(next)) {
@@ -19,27 +19,27 @@ public:
             }
         }
         visited[v] = 2;
-        
+
         return true;
     }
-    
+
     bool canFinish(int numCourses, vector < vector < int > >& prerequisites) {
         graph.resize(numCourses);
         visited.assign(numCourses, 0);
-        
+
         for (const auto& item : prerequisites) {
             auto before = item[0];
             auto after  = item[1];
-            
-            graph[before].push_back(after);            
+
+            graph[before].push_back(after);
         }
-        
+
         for (int i = 0; i < numCourses; ++i) {
             if (!dfs(i)) {
                 return false;
             }
         }
-        
+
         return true;
     }
 };

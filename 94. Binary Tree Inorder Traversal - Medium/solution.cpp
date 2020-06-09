@@ -17,24 +17,24 @@ public:
         if (!root) {
             return {};
         }
-        
+
         vector < int > ans;
         stack < TreeNode* > nodes;
-        
+
         while (root || !nodes.empty()) {
             while (root) {
                 nodes.push(root);
                 root = root->left;
             }
-            
+
             root = nodes.top();
             nodes.pop();
-            
+
             ans.push_back(root->val);
-            
+
             root = root->right;
         }
-        
+
         return ans;
     }
 };

@@ -7,15 +7,15 @@ public:
             while (r < s.length() && s[r] != ' ') {
                 ++r;
             }
-            
+
             cerr << l << " " << r << endl;
             reverse(s.begin() + l, s.begin() + r);
             ++r;
             l = r;
         }
         reverse(s.begin() + l, s.end());
-        
-        
+
+
         return s;
     }
 };

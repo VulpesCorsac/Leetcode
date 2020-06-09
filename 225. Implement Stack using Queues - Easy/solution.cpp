@@ -4,13 +4,13 @@ class MyStack {
 public:
     /** Initialize your data structure here. */
     MyStack() {
-        
+
     }
-    
+
     /** Push element x onto stack. */
     void push(int x) {
         q.push(x);
-        
+
         int sz = q.size();
         while (sz > 1) {
             q.push(q.front());
@@ -18,21 +18,21 @@ public:
             sz--;
         }
     }
-    
+
     /** Removes the element on top of the stack and returns that element. */
     int pop() {
         auto ans = top();
-        
+
         q.pop();
-        
+
         return ans;
     }
-    
+
     /** Get the top element. */
     int top() {
         return q.front();
     }
-    
+
     /** Returns whether the stack is empty. */
     bool empty() {
         return q.empty();

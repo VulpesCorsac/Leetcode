@@ -19,8 +19,8 @@ public:
             return generate(1, n);
         }
     }
-    
-    vector < TreeNode* > generate(int from, int to) {        
+
+    vector < TreeNode* > generate(int from, int to) {
         if (from > to) {
             return {nullptr};
         }
@@ -28,19 +28,19 @@ public:
         if (from == to) {
             return {new TreeNode(from)};
         }
-        
+
         vector < TreeNode* > ans;
         for (int i = from; i <= to; ++i) {
             auto left  = generate(from, i-1);
             auto right = generate(i+1 , to );
-            
+
             for (auto left_node : left) {
                 for (auto right_node : right) {
                     ans.push_back(new TreeNode(i, left_node, right_node));
                 }
             }
         }
-        
+
         return ans;
     }
 };

@@ -12,7 +12,7 @@ class KthLargest:
             heapq.heappush(self.pool, val)
         elif val > self.pool[0]:
             heapq.heapreplace(self.pool, val)
-        
+
         return self.pool[0]
 
 

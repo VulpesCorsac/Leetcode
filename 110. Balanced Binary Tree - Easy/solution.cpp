@@ -16,16 +16,16 @@ public:
         if (!root) {
             return true;
         }
-        
+
         return isBalanced(root->left) && isBalanced(root->right) && abs(getHeight(root->left) - getHeight(root->right)) < 2;
     }
-    
+
 private:
     int getHeight(TreeNode* root) {
         if (!root) {
             return 0;
         }
-        
+
         return 1 + max(getHeight(root->left), getHeight(root->right));
     }
 };

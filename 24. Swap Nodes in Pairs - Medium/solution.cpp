@@ -19,11 +19,11 @@ public:
         if (!head->next) {
             return head;
         }
-        
+
         auto next = head->next;
         head->next = swapPairs(next->next);
         next->next = head;
-        
+
         return next;
     }
 };

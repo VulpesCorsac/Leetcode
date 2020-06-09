@@ -3,14 +3,14 @@ class Solution {
 public:
     bool possibleBipartition(int N, vector<vector<int>>& dislikes) {
         vector < int > graph[N+1];
-        
+
         for(auto dislike : dislikes) {
             graph[dislike[0]].push_back(dislike[1]);
             graph[dislike[1]].push_back(dislike[0]);
         }
 
         vector < int > color(N + 1, 0);
-        
+
         function < bool(int, int) > dfs = [&](int v, int c) {
             if(color[v] != 0) {
                 return color[v] == c;
@@ -30,7 +30,7 @@ public:
                 return false;
             }
         }
-        
-        return true;        
+
+        return true;
     }
 };

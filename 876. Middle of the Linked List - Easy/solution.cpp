@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 /**
  * Definition for singly-linked list.
@@ -17,15 +17,15 @@ public:
             ++length;
             tmp = tmp->next;
         }
-        
+
         length = length / 2;
-        
+
         tmp = head;
-        
+
         for (int i = 0; i < length; ++i) {
             tmp = tmp->next;
         }
-        
+
         return tmp;
     }
 };

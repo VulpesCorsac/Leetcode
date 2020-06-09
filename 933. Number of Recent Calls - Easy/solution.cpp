@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class RecentCounter {
 public:
     RecentCounter() {
@@ -6,17 +6,17 @@ public:
             q.pop();
         }
     }
-    
+
     int ping(int t) {
         q.push(t);
-        
+
         while (!q.empty() && t - q.front() > 3000) {
             q.pop();
         }
-        
+
         return q.size();
     }
-    
+
     queue<int> q;
 };
 

@@ -8,17 +8,17 @@ class Solution:
     def findDuplicateSubtrees(self, root: TreeNode) -> List[TreeNode]:
         count = collections.Counter()
         ans = []
-        
+
         def collect(node):
-            if not node: 
+            if not node:
                 return "#"
-            
+
             serial = "{},{},{}".format(node.val, collect(node.left), collect(node.right))
-            
+
             count[serial] += 1
             if count[serial] == 2:
                 ans.append(node)
-            
+
             return serial
 
         collect(root)

@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     vector<int> plusOne(vector<int>& digits) {
@@ -12,7 +12,7 @@ public:
                 digits[--i] += 1;
             }
         }
-        
+
         return digits;
     }
 };

@@ -11,11 +11,11 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
  */
 class Solution {
 public:
-    vector < vector < int > > levelOrderBottom(TreeNode* root) {        
+    vector < vector < int > > levelOrderBottom(TreeNode* root) {
         vector < vector < int > > ans;
         vector < TreeNode* > next_level;
         vector < TreeNode* > prev_level = {root};
-        
+
         while (root && !prev_level.empty()) {
             vector < int > level;
             for (const auto& item: prev_level) {
@@ -23,7 +23,7 @@ public:
                     level.push_back(item->val);
                     next_level.push_back(item->left );
                     next_level.push_back(item->right);
-                }            
+                }
             }
             if (!level.empty()) {
                 ans.push_back(level);
@@ -31,7 +31,7 @@ public:
             prev_level.clear();
             swap(next_level, prev_level);
         }
-        
+
         reverse(ans.begin(), ans.end());
         return ans;
     }

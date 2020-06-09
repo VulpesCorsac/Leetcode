@@ -6,7 +6,7 @@ public:
         for (const auto& x: arr) {
             s[x]++;
         }
-        
+
         for (const auto& x: arr) {
             if (x && s.count(x * 2)) {
                 return true;
@@ -14,7 +14,7 @@ public:
                 return true;
             }
         }
-        
+
         return false;
     }
 
@@ -26,7 +26,7 @@ public:
                 }
             }
         }
-        
+
         return false;
     }
 };

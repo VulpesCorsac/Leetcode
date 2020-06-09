@@ -11,7 +11,7 @@ class Node:
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
         queue, first, current = root, None, None
-        
+
         while queue:
             if queue.left:
                 if first:
@@ -19,16 +19,16 @@ class Solution:
                     current = current.next
                 else:
                     first = current = queue.left
-            
+
             if queue.right:
                 if first:
                     current.next = queue.right
                     current = current.next
                 else:
                     first = current = queue.right
-            
+
             queue = queue.next
             if not queue and first:
                 queue, first, current = first, None, None
-        
+
         return root

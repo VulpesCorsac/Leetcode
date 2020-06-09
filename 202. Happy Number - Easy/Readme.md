@@ -6,7 +6,7 @@ A happy number is a number defined by the following process: Starting with any p
 ```
 Input: 19
 Output: true
-Explanation: 
+Explanation:
 1^2 + 9^2 = 82
 8^2 + 2^2 = 68
 6^2 + 8^2 = 100

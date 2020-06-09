@@ -7,7 +7,7 @@ public:
         for (const auto& current_shift : shift) {
             total_shift += current_shift[0] == 0 ? current_shift[1] : -current_shift[1];
         }
-        
+
         if (total_shift >= 0) {
             total_shift %= s.length();
         } else {
@@ -15,22 +15,22 @@ public:
             total_shift %= s.length();
             total_shift *= -1;
         }
-        
+
         return makeShift(s, total_shift);
     }
-    
+
     string makeShift(string s, int shift) {
         if (shift == 0) {
-            return s;    
+            return s;
         }
-        
+
         string ans;
         if (shift > 0) {
             ans = s.substr(shift, s.length()) + s.substr(0, shift);
         } else {
             ans = s.substr(s.length()+shift, s.length()) + s.substr(0, s.length()+shift);
         }
-        
+
         return ans;
     }
 };

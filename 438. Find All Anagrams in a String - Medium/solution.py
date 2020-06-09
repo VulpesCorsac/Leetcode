@@ -13,17 +13,17 @@ class Solution:
                 freq = letters[ord(s[j]) - ord('a')]
                 if freq > 0:
                     remaining -= 1
-                    
+
                 letters[ord(s[j]) - ord('a')] -= 1
                 j += 1
-            
+
             index = ord(s[i]) - ord('a')
-            
+
             if remaining == 0 and j - i == len(p):
                 res.append(i)
-     
+
             if letters[index] >= 0:
                 remaining += 1
             letters[index] += 1
-            
+
         return res

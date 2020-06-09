@@ -2,7 +2,7 @@ class Solution:
     def containsNearbyAlmostDuplicate(self, nums: List[int], k: int, t: int) -> bool:
         if k < 0 or t < 0:
             return False
-            
+
         bucket = {}
 
         t += 1

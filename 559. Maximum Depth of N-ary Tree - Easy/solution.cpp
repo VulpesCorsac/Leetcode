@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 /*
 // Definition for a Node.
@@ -25,15 +25,15 @@ public:
         if (!root) {
             return 0;
         }
-        
+
         int ans = 0;
-        
+
         for (Node* child : root->children) {
             ans = max(ans, maxDepth(child));
         }
-        
+
 //        cout << root->val << " - " << ans << endl;
-        
+
         return ans+1;
     }
 };

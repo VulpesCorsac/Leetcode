@@ -1,10 +1,11 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class FooBar {
 private:
     int n;
     mutex m1, m2;
-    
+
 public:
-    FooBar(int n) 
+    FooBar(int n)
         : n(n) {
         m1.lock();
         m2.lock();

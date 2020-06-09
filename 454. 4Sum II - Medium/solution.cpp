@@ -10,10 +10,10 @@ private:
 
     int kSumCount(const vector < vector < int > > &lists) {
         addToHash(lists, 0, 0);
-        
+
         return countComplements(lists, lists.size() / 2, 0);
     }
-    
+
     void addToHash(const vector < vector < int > > & lists, int i, int sum) {
         if (i == lists.size() / 2) {
             ++m[sum];
@@ -23,18 +23,18 @@ private:
             }
         }
     }
-    
+
     int countComplements(const vector < vector < int > > & lists, int i, int complement) {
         if (i == lists.size()) {
             auto it = m.find(complement);
             return it == m.end() ? 0 : it->second;
         }
-        
+
         int cnt = 0;
         for (int a : lists[i]) {
             cnt += countComplements(lists, i + 1, complement - a);
         }
-        
+
         return cnt;
     }
 };

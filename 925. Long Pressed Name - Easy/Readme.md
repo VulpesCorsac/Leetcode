@@ -2,7 +2,7 @@ Your friend is typing his *name* into a keyboard.  Sometimes, when typing a char
 
 You examine the *typed* characters of the keyboard.  Return *True* if it is possible that it was your friends name, with some characters (possibly none) being long pressed.
 
- 
+
 
 **Example 1:**
 ```

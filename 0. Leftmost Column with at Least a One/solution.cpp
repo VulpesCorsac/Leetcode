@@ -13,7 +13,7 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 class Solution {
 public:
     int N, M;
-    
+
     int getAnsForRow(BinaryMatrix &binaryMatrix, int row) {
         if (binaryMatrix.get(row, M-1)) {
             int l = 0;
@@ -34,23 +34,23 @@ public:
             return -1;
         }
     }
-    
+
     int leftMostColumnWithOne(BinaryMatrix &binaryMatrix) {
         auto dimensions = binaryMatrix.dimensions();
-        
+
         N = dimensions[0];
         M = dimensions[1];
-        
+
         int ans = -1;
-        
+
         for (int row = 0; row < N; ++row) {
             auto temp = getAnsForRow(binaryMatrix, row);
-            
+
             if (temp >= 0 && (temp < ans || ans == -1)) {
                 ans = temp;
             }
         }
-        
+
         return ans;
     }
 };

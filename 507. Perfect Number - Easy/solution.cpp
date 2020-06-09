@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 class Solution {
 public:
@@ -21,15 +21,15 @@ public:
         if (num < 6) {
             return false;
         }
-        
+
         int sum = 1;
-        
+
         for (int i = 2; i*i <= num; ++i) {
             if (num % i == 0) {
                 sum += i + num / i;
             }
         }
-        
+
         return sum == num;
     }
 

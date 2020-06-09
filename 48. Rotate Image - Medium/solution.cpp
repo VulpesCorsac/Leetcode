@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
@@ -8,7 +8,7 @@ public:
             for (int j = i; j < end; ++j) {
                 int offset = j - i;
                 int end_minus_offset = end-offset;
-                
+
                 int temp = matrix[i][j];
                 matrix[i][j] = matrix[end_minus_offset][i];
                 matrix[end_minus_offset][i] = matrix[end][end_minus_offset];

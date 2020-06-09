@@ -10,7 +10,7 @@ Return *S* after removing the outermost parentheses of every primitive string in
 ```
 Input: "(()())(())"
 Output: "()()()"
-Explanation: 
+Explanation:
 The input string is "(()())(())", with primitive decomposition "(()())" + "(())".
 After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
 ```
@@ -18,7 +18,7 @@ After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
 ```
 Input: "(()())(())(()(()))"
 Output: "()()()()(())"
-Explanation: 
+Explanation:
 The input string is "(()())(())(()(()))", with primitive decomposition "(()())" + "(())" + "(()(()))".
 After removing outer parentheses of each part, this is "()()" + "()" + "()(())" = "()()()()(())".
 ```
@@ -26,7 +26,7 @@ After removing outer parentheses of each part, this is "()()" + "()" + "()(())" 
 ```
 Input: "()()"
 Output: ""
-Explanation: 
+Explanation:
 The input string is "()()", with primitive decomposition "()" + "()".
 After removing outer parentheses of each part, this is "" + "" = "".
 ```

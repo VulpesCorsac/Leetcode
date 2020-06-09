@@ -17,7 +17,7 @@ public:
         if (!l2) {
             return l1;
         }
-        
+
         ListNode* head = nullptr;
         if (l1->val < l2->val) {
             head = l1;
@@ -26,9 +26,9 @@ public:
             head = l2;
             l2 = l2->next;
         }
-        
+
         auto curr = head;
-        
+
         while (l1 && l2) {
             if (l1->val < l2->val) {
                 curr->next = l1;
@@ -39,13 +39,13 @@ public:
             }
             curr = curr->next;
         }
-        
+
         if (l1) {
             curr->next = l1;
         } else {
             curr->next = l2;
         }
-        
+
         return head;
     }
 };

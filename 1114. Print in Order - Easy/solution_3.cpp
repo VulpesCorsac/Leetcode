@@ -1,11 +1,12 @@
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Foo {
     atomic < bool > isSecondAvailable = false;
     atomic < bool > isThirdAvailable  = false;
-    
+
 public:
     void first(function < void() > printFirst) {
         printFirst();
-        
+
         isSecondAvailable.store(true);
     }
 

@@ -1,9 +1,9 @@
-static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int romanToInt(string s) {
         int ans = 0;
-        
+
         bool substract = false;
         for (int i = 0; i < s.length(); ++i) {
             if (s[i] == 'M') {
@@ -36,7 +36,7 @@ public:
             } else if (s[i] == 'L') {
                 if (substract) {
                     ans += 40;
-                    substract = false;                    
+                    substract = false;
                 } else {
                     ans += 50;
                 }
@@ -74,7 +74,7 @@ public:
                 throw std::invalid_argument("");
             }
         }
-        
+
         return ans;
     }
 };

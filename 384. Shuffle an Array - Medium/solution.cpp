@@ -1,15 +1,15 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
-    Solution(vector<int>& nums) 
+    Solution(vector<int>& nums)
         : original(std::move(nums)) {
     }
-    
+
     /** Resets the array to its original configuration and return it. */
     vector<int> reset() {
         return original;
     }
-    
+
     /** Returns a random shuffling of the array. */
     vector<int> shuffle() {
         vector < int > result(original);

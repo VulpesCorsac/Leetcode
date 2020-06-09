@@ -1,11 +1,11 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         int result = 0;
         int last_erase = 0;
         unordered_map < char , int > index;
-        
+
         for (int position = 0; position < s.length(); ++position) {
 //            cout << position << " - " << s[position] << " ";
             if (!index.count(s[position])) {
@@ -21,11 +21,11 @@ public:
             index[s[position]] = position;
             result = max(result, static_cast<int>(index.size()));
 //            cout << result << " { ";
-//            for (const auto& item: index) 
+//            for (const auto& item: index)
 //                cout << item.first << ":" << item.second << " ";
 //            cout << "}\n";
         }
-        
+
         return result;
     }
 };

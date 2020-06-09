@@ -1,4 +1,4 @@
-static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);return 0;}();
+static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 
 // Forward declaration of isBadVersion API.
 bool isBadVersion(int version);
@@ -16,7 +16,7 @@ public:
                 l = m + 1;
             }
         }
-        
+
         return r;
     }
 };
