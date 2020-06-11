@@ -7,11 +7,7 @@ public:
         unordered_map < char , int > index;
 
         for (int position = 0; position < s.length(); ++position) {
-//            cout << position << " - " << s[position] << " ";
-            if (!index.count(s[position])) {
-//                cout << "add, ";
-            } else {
-//                cout << "erase [" << last_erase << " " << index[s[position]] << "], ";
+            if (index.count(s[position])) {
                 int q = index[s[position]];
                 for (int temp = last_erase; temp <= index[s[position]]; ++temp) {
                     index.erase(s[temp]);
@@ -20,10 +16,6 @@ public:
             }
             index[s[position]] = position;
             result = max(result, static_cast<int>(index.size()));
-//            cout << result << " { ";
-//            for (const auto& item: index)
-//                cout << item.first << ":" << item.second << " ";
-//            cout << "}\n";
         }
 
         return result;

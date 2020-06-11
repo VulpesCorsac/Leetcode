@@ -6,7 +6,7 @@ public:
             return x;
         }
 
-        int max_sqrt = static_cast<int>(sqrt(INT_MAX));
+        int max_sqrt = static_cast < int >(sqrt(INT_MAX));
 
         int left = 0;
         int right = x/2+1;

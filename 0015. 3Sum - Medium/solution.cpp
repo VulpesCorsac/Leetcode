@@ -2,7 +2,7 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
+    vector < vector < int > > threeSum(vector < int >& nums) {
         vector < vector < int > > result;
 
         sort(nums.begin(), nums.end());

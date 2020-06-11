@@ -8,8 +8,6 @@ public:
         while (l <= r) {
             int m = l + (r - l) / 2;
 
-//            cout << nums[l] << " " << nums[m] << " " << nums[r] << "\n";
-
             if (nums[l] == target) {
                 return l;
             }
@@ -42,7 +40,7 @@ public:
                 }
             }
         }
-        if (r+1 < nums.size() && nums[r+1] == target) {
+        if (r + 1 < nums.size() && nums[r+1] == target) {
             return r+1;
         }
 

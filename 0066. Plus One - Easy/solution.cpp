@@ -1,7 +1,7 @@
 static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
-    vector<int> plusOne(vector<int>& digits) {
+    vector < int > plusOne(vector < int >& digits) {
         int i = digits.size()-1;
         ++digits[i];
         while (digits[i] >= 10) {

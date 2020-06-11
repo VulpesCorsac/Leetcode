@@ -14,7 +14,7 @@ public:
         }
     }
 
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+    vector < vector < string > > groupAnagrams(vector < string > & strs) {
         for (const auto& str: strs) {
             result[get_mask_to_vector_position(str)].push_back(str);
         }
@@ -23,6 +23,6 @@ public:
     }
 
 private:
-    unordered_map<string, int> mask_to_vector_position;
-    vector<vector<string>> result;
+    unordered_map < string, int > mask_to_vector_position;
+    vector < vector < string > > result;
 };

@@ -14,10 +14,10 @@ public:
 
         while (tmp != 0) {
             revert *= 10;
-            revert += tmp%10;
+            revert += tmp % 10;
             tmp /= 10;
         }
 
-        return revert==x;
+        return revert == x;
     }
 };

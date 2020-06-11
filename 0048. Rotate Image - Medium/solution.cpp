@@ -1,7 +1,7 @@
 static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
-    void rotate(vector<vector<int>>& matrix) {
+    void rotate(vector < vector < int > >& matrix) {
         int n = matrix.size();
         for (int i = 0; i < n/2; ++i) {
             int end = n-1 - i;

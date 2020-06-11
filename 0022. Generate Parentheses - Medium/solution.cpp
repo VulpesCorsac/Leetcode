@@ -1,7 +1,7 @@
 static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); return 0; } ();
 class Solution {
 public:
-    vector<string> generateParenthesis(int n) {
+    vector < string > generateParenthesis(int n) {
         back_track(n);
 
         return ans;
@@ -22,5 +22,5 @@ public:
         }
     }
 
-    vector<string> ans;
+    vector < string > ans;
 };

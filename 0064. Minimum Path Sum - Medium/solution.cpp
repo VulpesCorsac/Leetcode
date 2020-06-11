@@ -2,7 +2,7 @@ static auto _ = [] () { ios_base::sync_with_stdio(false); cin.tie(nullptr); retu
 
 class Solution {
 public:
-    int minPathSum(vector<vector<int>>& grid) {
+    int minPathSum(vector < vector < int > >& grid) {
         for (int j = 0; j < grid[0].size(); ++j) {
             for (int i = 0; i < grid.size(); ++i) {
                 if (j == 0) {
