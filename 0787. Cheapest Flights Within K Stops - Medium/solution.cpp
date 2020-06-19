@@ -4,7 +4,7 @@ public:
     int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int K) {
         vector < int > ford_bellman(n, 1e8);
         ford_bellman[src] = 0;
-        
+
         for(int i = 0; i <= K; i++){
             vector < int > updated(ford_bellman);
             for(const auto& edje: flights) {

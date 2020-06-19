@@ -15,7 +15,7 @@ public:
         m1.unlock();
         for (int i = 0; i < n; i++) {
             m1.lock();
-        	printFoo();
+            printFoo();
             m2.unlock();
         }
     }
@@ -23,7 +23,7 @@ public:
     void bar(function < void() > printBar) {
         for (int i = 0; i < n; i++) {
             m2.lock();
-        	printBar();
+            printBar();
             m1.unlock();
         }
     }

@@ -9,7 +9,7 @@ public:
         } else if (regex_match(IP, ipv6)) {
             return "IPv6";
         } else {
-            return "Neither"; 
+            return "Neither";
         }
     }
 };

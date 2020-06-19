@@ -16,7 +16,7 @@ Input
 Output
 [null,1,null,5,5,null,10,5]
 Explanation
-SubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,2,1],[4,3,4],[3,2,1],[1,1,1]]);  
+SubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,2,1],[4,3,4],[3,2,1],[1,1,1]]);
 // The initial rectangle (4x3) looks like:
 // 1 2 1
 // 4 3 4
@@ -28,7 +28,7 @@ subrectangleQueries.updateSubrectangle(0, 0, 3, 2, 5);
 // 5 5 5
 // 5 5 5
 // 5 5 5
-// 5 5 5 
+// 5 5 5
 subrectangleQueries.getValue(0, 2); // return 5
 subrectangleQueries.getValue(3, 1); // return 5
 subrectangleQueries.updateSubrectangle(3, 0, 3, 2, 10);
@@ -36,7 +36,7 @@ subrectangleQueries.updateSubrectangle(3, 0, 3, 2, 10);
 // 5   5   5
 // 5   5   5
 // 5   5   5
-// 10  10  10 
+// 10  10  10
 subrectangleQueries.getValue(3, 1); // return 10
 subrectangleQueries.getValue(0, 2); // return 5
 ```

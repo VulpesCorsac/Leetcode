@@ -47,11 +47,11 @@ private:
         }
 
         board[i][j] = 'S';
-        
+
         DFS(board, i-1, j, m, n);
         DFS(board, i+1, j, m, n);
         DFS(board, i, j-1, m, n);
         DFS(board, i, j+1, m, n);
     }
-    
+
 };

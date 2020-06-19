@@ -47,5 +47,3 @@ public:
         return n << c;
     }
 };
-
-

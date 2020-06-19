@@ -4,11 +4,11 @@ Now given all the cities and flights, together with starting city *src* and the 
 
 **Example 1:**
 ```
-Input: 
+Input:
 n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
 src = 0, dst = 2, k = 1
 Output: 200
-Explanation: 
+Explanation:
 The graph looks like this:
 ![](995.png)
 
@@ -17,11 +17,11 @@ The cheapest price from city 0 to city 2 with at most 1 stop costs 200, as marke
 
 **Example 2:**
 ```
-Input: 
+Input:
 n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
 src = 0, dst = 2, k = 0
 Output: 500
-Explanation: 
+Explanation:
 The graph looks like this:
 ![](995.png)
 

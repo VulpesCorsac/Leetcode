@@ -12,7 +12,7 @@ Explanation: Remove the single 4, only 5 is left.
 Input: arr = [4,3,1,1,3,3,2], k = 3
 Output: 2
 Explanation: Remove 4, 2 and either one of the two 1s or three 3s. 1 and 3 will be left.
-``` 
+```
 
 **Constraints:**
 

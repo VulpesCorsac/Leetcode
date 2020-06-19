@@ -47,7 +47,7 @@ public:
     }
 
     // printFizzBuzz() outputs "fizzbuzz".
-	void fizzbuzz(function < void() > printFizzBuzz) {
+    void fizzbuzz(function < void() > printFizzBuzz) {
         while (true) {
             unique_lock lock(m);
             while (cnt <= n && (cnt % 3 != 0 || cnt % 5 != 0)) {

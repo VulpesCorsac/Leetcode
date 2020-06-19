@@ -2,8 +2,8 @@ class Solution:
     def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         count = sorted(Counter(arr).items(), key=lambda x: x[1])
         removed = 0
-        for key, val in count: 
-            if k >= val:  
+        for key, val in count:
+            if k >= val:
                 k -= val
                 removed += 1
             else:

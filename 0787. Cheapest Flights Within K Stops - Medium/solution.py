@@ -4,7 +4,7 @@ class Solution:
         q = collections.deque()
         min_price = float('inf')
 
-        for u, v, w in flights: 
+        for u, v, w in flights:
             graph[u].append((w, v))
 
         q.append((src, 0, 0))

@@ -50,7 +50,7 @@ if __name__ == '__main__':
                             new_s = s.replace('\t', '    ') # tabs to spaces
                             new_data.append(new_s.rstrip()) # rstrip that string
 
-                        while new_data[-1] == '': # delete blank lines at the end of the file
+                        while new_data and new_data[-1] == '': # delete blank lines at the end of the file
                             new_data.pop(-1)
 
                         with open(file_full_path, 'w') as file: # write new data to file

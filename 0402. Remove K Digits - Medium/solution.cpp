@@ -31,15 +31,15 @@ public:
 
         string ans;
         ans.reserve(st.size());
-        for(int i = 0; i < st.size(); ++i){
-			if(!ans.empty() || st[i] != '0') {
-				ans += st[i];
+        for (int i = 0; i < st.size(); ++i){
+            if (!ans.empty() || st[i] != '0') {
+                ans += st[i];
 
                 if (ans.size() == num.size()-fall) {
                     break;
                 }
             }
-		}
+        }
 
         return ans.empty() ? "0" : ans;
     }
